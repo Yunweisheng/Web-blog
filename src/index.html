@@ -1,0 +1,779 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="./output.css" rel="stylesheet">
+  <link rel="stylesheet" href="./input.css">
+  <title>Ecommerce Website </title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    *{
+      font-family: "Roboto";
+      outline: none;
+    }
+  </style>
+  <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+<script src="https://kit.fontawesome.com/5ce14b4205.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+  
+<!-- navbar section  -->
+<header>
+    <!-- Upper text -->
+  
+    <div class="bg-black px-4">
+      <div class="max-w-7xl mx-auto">
+          <div class="flex justify-center items-center text-white py-2 relative">
+              <div class="flex justify-center items-center gap-3">
+                  <p class="text-center">
+                      Summer Sale for All Swim Suit And Free Express Delivery - OFF 50%
+                  </p>
+                  <button class="font-semibold hover:text-red-400">Shop Now</button>
+              </div>
+              <p class="absolute right-0 pr-4">English</p>
+          </div>
+      </div>
+  </div>
+  
+  <header class="pb-6 bg-white lg:pb-0" >
+    <div class="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
+      <!-- lg+ -->
+      <nav class="flex items-center justify-between h-16 lg:h-20">
+        <div class="flex">
+          <a href="#" title="" class="flex">
+            <h1 class="text-3xl font-bold ">Exclusive</h1>
+          </a>
+        </div>
+  
+        <ion-icon @click="expanded = !expanded" class="inline-flex p-2 text-3xl text-black transition-all duration-200 rounded-md lg:hidden focus:bg-gray-100 hover:bg-gray-100" name="menu-outline"></ion-icon>
+  
+        <div class="hidden ml-auto lg:flex lg:items-center lg:space-x-10 justify-end">
+          <a href="#" title="" class="text-base font-medium text-black transition-all duration-200 hover:text-blue-600 focus:text-blue-600"> Home </a>
+          <a href="#" title="" class="text-base font-medium text-black transition-all duration-200 hover:text-blue-600 focus:text-blue-600"> Contact </a>
+          <a href="#" title="" class="text-base font-medium text-black transition-all duration-200 hover:text-blue-600 focus:text-blue-600"> About</a>
+          <a href="#" title="" class="text-base font-medium text-black transition-all duration-200 hover:text-blue-600 focus:text-blue-600"> Sign up </a>
+          <a href="#" title="" class="text-base font-medium text-black transition-all duration-200 hover:text-blue-600 focus:text-blue-600"> Sign in </a>
+      
+          <div class="flex items-center space-x-5">
+              <div class="relative w-[250px]">
+                  <ion-icon name="search-outline" class="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-500"></ion-icon>
+                  <input type="text" placeholder="What are you looking for?" 
+                      class="w-full pl-10 pr-4 py-2 border border-gray-400 rounded-lg transition-all duration-200 hover:border-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50">
+              </div>
+              <ion-icon name="heart-outline" class="text-gray-500"></ion-icon>
+              <ion-icon name="cart-outline"></ion-icon>
+              <ion-icon name="person-outline"></ion-icon>
+          </div>
+          
+      </div>
+        
+      </nav>
+      <hr class="h-px my-8 bg-gray-200 border-0 dark:bg-gray-500 w-full">
+  
+     
+      <nav  class="pt-4 pb-6 bg-white border border-gray-200 rounded-md shadow-md lg:hidden">
+        <div class="flow-root">
+          <div class="flex flex-col px-6 -my-2 space-y-1">
+            <a href="#" title="" class="inline-flex py-2 text-base font-medium text-black transition-all duration-200 hover:text-blue-600 focus:text-blue-600"> Home </a>
+  
+            <a href="#" title="" class="inline-flex py-2 text-base font-medium text-black transition-all duration-200 hover:text-blue-600 focus:text-blue-600"> Contact </a>
+  
+            <a href="#" title="" class="inline-flex py-2 text-base font-medium text-black transition-all duration-200 hover:text-blue-600 focus:text-blue-600"> About</a>
+  
+            <a href="#" title="" class="inline-flex py-2 text-base font-medium text-black transition-all duration-200 hover:text-blue-600 focus:text-blue-600"> Sign up </a>
+          </div>
+        </div>
+  
+        <div class="px-6 mt-6">
+          <a href="#" title="" class="inline-flex justify-center px-4 py-3 text-base font-semibold text-white transition-all duration-200 bg-blue-600 border border-transparent rounded-md tems-center hover:bg-blue-700 focus:bg-blue-700" role="button"> Get started </a>
+        </div>
+      </nav>
+    </div>
+  </header>
+</header>
+<!-- Hero section -->
+<section>
+  <div class="max-w-7xl mx-auto px-4">
+    <div class="grid grid-cols-1 md:grid-cols-5 gap-6 items-center">
+      
+      <!-- Left Side (Category List) -->
+      <div class="md:col-span-1 pr-4">
+        <ul class="flex flex-col gap-4 border-gray-200 border-r-2 py-6">
+          <li class="hover:text-red-400 duration-200 flex justify-between pr-5">
+            <a href="#">Women's Fashion</a>
+            <ion-icon name="chevron-forward-outline"></ion-icon>
+          </li>
+          <li class="hover:text-red-400 duration-200 flex justify-between pr-5">
+            <a href="#">Men's Fashion</a>
+            <ion-icon name="chevron-forward-outline"></ion-icon>
+          </li>
+          <li class="hover:text-red-400 duration-200 flex justify-between pr-5">
+            <a href="#">Electronics</a>
+            <ion-icon name="chevron-forward-outline"></ion-icon>
+          </li>
+          <li class="hover:text-red-400 duration-200 flex justify-between pr-5">
+            <a href="#">Home & Lifestyle</a>
+            <ion-icon name="chevron-forward-outline"></ion-icon>
+          </li>
+          <li class="hover:text-red-400 duration-200 flex justify-between pr-5">
+            <a href="#">Medicine</a>
+            <ion-icon name="chevron-forward-outline"></ion-icon>
+          </li>
+          <li class="hover:text-red-400 duration-200 flex justify-between pr-5">
+            <a href="#">Sport & Outdoor</a>
+            <ion-icon name="chevron-forward-outline"></ion-icon>
+          </li>
+          <li class="hover:text-red-400 duration-200 flex justify-between pr-5">
+            <a href="#">Baby's & Toys</a>
+            <ion-icon name="chevron-forward-outline"></ion-icon>
+          </li>
+          <li class="hover:text-red-400 duration-200 flex justify-between pr-5">
+            <a href="#">Groceries & Pets</a>
+            <ion-icon name="chevron-forward-outline"></ion-icon>
+          </li>
+          <li class="hover:text-red-400 duration-200 flex justify-between pr-5">
+            <a href="#">Health & Beauty</a>
+            <ion-icon name="chevron-forward-outline"></ion-icon>
+          </li>
+        </ul>
+      </div>
+      
+      <!-- Right Side (Image with Text Overlay) -->
+      <div class="md:col-span-4 bg-black p-6 relative">
+        <!-- Content Container -->
+        <div class="flex flex-row-reverse items-center">
+          <!-- iPhone Image -->
+          <div class="w-1/2">
+            <img
+              src="https://website-builderx-assets.s3.ap-south-1.amazonaws.com/hero_endframe_cvklg0xk3w6e_large_2_e21b30e18f.png?updated_at=2025-01-31T05:31:41.168Z"
+              alt="iPhone 16 Series"
+              class="w-full object-cover rounded-lg shadow-lg"
+            >
+          </div>
+          
+          <!-- Text Content -->
+          <div class="w-1/2 text-white p-6">
+            <div class="flex items-center gap-2 mb-4">
+              <ion-icon class="text-2xl lg:text-4xl" name="logo-apple"></ion-icon>
+              <span>iPhone 16 Series</span>
+            </div>
+            
+            <h1 class="text-3xl md:text-5xl font-bold mb-6">
+              Up to 10% off Voucher
+            </h1>
+            
+            <button class="bg-white text-black px-4 py-2 rounded-lg flex items-center gap-2 group hover:bg-gray-100 transition-colors">
+              <span>Shop now</span>
+              <ion-icon name="arrow-forward-outline" class="group-hover:translate-x-1 transition-transform"></ion-icon>
+            </button>
+          </div>
+        </div>
+        
+        <!-- Dots section -->
+        <div class="absolute bottom-4 left-0 right-0">
+          <div class="flex justify-center items-center gap-2 md:gap-2">
+            <div class="h-3 w-3 rounded-full bg-gray-500"></div>
+            <div class="h-3 w-3 rounded-full bg-gray-500"></div>
+            <div class="h-3 w-3 rounded-full bg-red-500 border-2 border-white"></div>
+            <div class="h-3 w-3 rounded-full bg-gray-500"></div>
+            <div class="h-3 w-3 rounded-full bg-gray-500"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Flash Sale section -->
+<section class="my-24">
+  <div class="max-w-7xl mx-auto px-4 lg:px-8">
+    <!-- heading -->
+    <div class="flex item-center gap-4">
+      <div class="w-3 h-8 bg-red-500 rounded-lg"></div>
+      <p class="text-red-500">Today's</p>
+    </div>
+    <div class="flex justify-between items-center">
+      <p class="text-3xl md:text-4xl font-semibold">Flash Sales</p>
+      
+      <!-- Timer -->
+      <div class="flex gap-3 justify-center items-center">
+        <div>
+          <p class="text-sm">Days</p>
+          <p class="text-3xl font-bold lg:text-4xl">03</p>
+        </div>
+        <p class="text-red-500 text-3xl font-bold  mt-4">:</p>
+        <div>
+          <p>Hours</p>
+          <p class="text-3xl font-bold lg:text-4xl">23</p>
+        </div>
+        <p class="text-red-500 text-3xl font-bold mt-4">:</p>
+        <div>
+          <p>Minutes</p>
+          <p class="text-3xl font-bold lg:text-4xl">19</p>
+        </div>
+        <p class="text-red-500 text-3xl font-bold mt-4">:</p>
+        <div>
+          <p>Seconds</p>
+          <p class="text-3xl font-bold lg:text-4xl">56</p>
+        </div>
+      </div>
+      
+      <!-- Arrows -->
+      <div class="flex items-center gap-2">
+        <div class="h-8 w-8 md:h-10 md:w-10 flex justify-center items-center hover:bg-red-400 duration-200 rounded-full border border-gray-300 cursor-pointer">
+          <ion-icon name="arrow-back-outline" class="text-lg md:text-xl"></ion-icon>
+        </div>
+        <div class="h-8 w-8 md:h-10 md:w-10 flex justify-center items-center hover:bg-red-400 duration-200 rounded-full border border-gray-300 cursor-pointer">
+          <ion-icon name="arrow-forward-outline" class="text-lg md:text-xl"></ion-icon>
+        </div>
+      </div>
+    </div>
+    
+<!-- Card container section -->
+<section class="w-full">
+  <!-- Products carousel container -->
+  <div class="flex justify-center w-full mt-6">
+    <!-- All cards in a single flex container with equal margins -->
+    <div class="flex flex-nowrap gap-4 overflow-x-auto py-4 mx-auto">
+      
+      <!-- Card 1 -->
+      <div class="flex-shrink-0">
+        <!-- Image section  -->
+        <div class="bg-gray-100 h-56 w-64 mb-4 flex justify-center items-center rounded-lg overflow-hidden relative group">
+          <!-- Product image -->
+          <img src="https://m.media-amazon.com/images/I/71xFt1Dg+iL.jpg" alt="Xbox Controller" class="object-contain h-full w-full p-4 mix-blend-multiply">
+          
+          <!-- Heart and Eye icons positioned at top-right of the image -->
+          <div class="absolute top-3 right-3 flex flex-col gap-2">
+            <div class="h-8 w-8 rounded-full bg-white hover:bg-red-50 hover:text-red-500 duration-200 flex justify-center items-center cursor-pointer">
+              <ion-icon name="heart-outline"></ion-icon>
+            </div>
+            <div class="h-8 w-8 rounded-full bg-white hover:bg-red-50 hover:text-red-500 duration-200 flex justify-center items-center cursor-pointer">
+              <ion-icon name="eye-outline"></ion-icon>
+            </div>
+          </div>
+          
+          <!-- Add to Cart button (bottom overlay) -->
+          <div class="bg-black text-white absolute bottom-0 right-0 left-0 py-3 opacity-0 group-hover:opacity-100 transition-opacity duration-300 cursor-pointer">
+            <p class="text-center font-medium flex items-center justify-center gap-2">
+              <ion-icon name="cart-outline"></ion-icon>
+              Add to Cart
+            </p>
+          </div>
+          
+          <!-- Discount badge (top left overlay) -->
+          <div class="absolute top-3 left-3">
+            <p class="bg-red-500 text-white px-2 py-1 text-sm rounded-md font-medium">-40%</p>
+          </div>
+        </div>
+        
+        <!-- Details section -->
+        <div class="w-64">
+          <p class="text-md md:text-lg">Solid Gold Xbox Controller Gamepad</p>
+          <p>
+            <span class="text-red-500">$87500</span>
+            <span class="text-gray-400 line-through">$52500</span>
+          </p>
+          <div class="flex items-center gap-1">
+            <ion-icon class="text-yellow-500 text-lg md:text-xl" name="star"></ion-icon>
+            <ion-icon class="text-yellow-500 text-lg md:text-xl" name="star"></ion-icon>
+            <ion-icon class="text-yellow-500 text-lg md:text-xl" name="star"></ion-icon>
+            <ion-icon class="text-yellow-500 text-lg md:text-xl" name="star"></ion-icon>
+            <ion-icon class="text-yellow-500 text-lg md:text-xl" name="star"></ion-icon>
+            <p class="text-gray-400 ml-1">(88)</p>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Card 2 -->
+      <div class="flex-shrink-0">
+        <!-- Image section  -->
+        <div class="bg-gray-100 h-56 w-64 mb-4 flex justify-center items-center rounded-lg overflow-hidden relative group">
+          <!-- Product image -->
+          <img src="https://image-cdn.jambuntech.dev/5NXk-REkQufOoAfpbx6iDoTTHRTf3Dtdd-kwSGvx/1200x/filters:format(webp)/tk/1_fa4cc74d48.png" alt="Xbox Controller" class="object-contain h-full w-full p-4 mix-blend-multiply">
+          
+          <!-- Heart and Eye icons positioned at top-right of the image -->
+          <div class="absolute top-3 right-3 flex flex-col gap-2">
+            <div class="h-8 w-8 rounded-full bg-white hover:bg-red-50 hover:text-red-500 duration-200 flex justify-center items-center cursor-pointer">
+              <ion-icon name="heart-outline"></ion-icon>
+            </div>
+            <div class="h-8 w-8 rounded-full bg-white hover:bg-red-50 hover:text-red-500 duration-200 flex justify-center items-center cursor-pointer">
+              <ion-icon name="eye-outline"></ion-icon>
+            </div>
+          </div>
+          
+          <!-- Add to Cart button (bottom overlay) -->
+          <div class="bg-black text-white absolute bottom-0 right-0 left-0 py-3 opacity-0 group-hover:opacity-100 transition-opacity duration-300 cursor-pointer">
+            <p class="text-center font-medium flex items-center justify-center gap-2">
+              <ion-icon name="cart-outline"></ion-icon>
+              Add to Cart
+            </p>
+          </div>
+          
+          <!-- Discount badge (top left overlay) -->
+          <div class="absolute top-3 left-3">
+            <p class="bg-red-500 text-white px-2 py-1 text-sm rounded-md font-medium">-20%</p>
+          </div>
+        </div>
+        
+        <!-- Details section -->
+        <div class="w-64">
+          <p class="text-md md:text-lg">GMMK3 Pro HE 75% Wireless Best Magnetic Keyboard</p>
+          <p>
+            <span class="text-red-500">$409</span>
+            <span class="text-gray-400 line-through">$327</span>
+          </p>
+          <div class="flex items-center gap-1">
+            <ion-icon class="text-yellow-500 text-lg md:text-xl" name="star"></ion-icon>
+            <ion-icon class="text-yellow-500 text-lg md:text-xl" name="star"></ion-icon>
+            <ion-icon class="text-yellow-500 text-lg md:text-xl" name="star"></ion-icon>
+            <ion-icon class="text-yellow-500 text-lg md:text-xl" name="star"></ion-icon>
+            <p class="text-gray-400 ml-1">(88)</p>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Card 3 -->
+      <div class="flex-shrink-0">
+        <!-- Image section  -->
+        <div class="bg-gray-100 h-56 w-64 mb-4 flex justify-center items-center rounded-lg overflow-hidden relative group">
+          <!-- Product image -->
+          <img src="https://pisces.bbystatic.com/image2/BestBuy_US/images/products/28330ec6-92a5-4304-9aa4-233afd6c28a0.jpg;maxHeight=640;maxWidth=550;format=webp" alt="Xbox Controller" class="object-contain h-full w-full p-4 mix-blend-multiply">
+          
+          <!-- Heart and Eye icons positioned at top-right of the image -->
+          <div class="absolute top-3 right-3 flex flex-col gap-2">
+            <div class="h-8 w-8 rounded-full bg-white hover:bg-red-50 hover:text-red-500 duration-200 flex justify-center items-center cursor-pointer">
+              <ion-icon name="heart-outline"></ion-icon>
+            </div>
+            <div class="h-8 w-8 rounded-full bg-white hover:bg-red-50 hover:text-red-500 duration-200 flex justify-center items-center cursor-pointer">
+              <ion-icon name="eye-outline"></ion-icon>
+            </div>
+          </div>
+          
+          <!-- Add to Cart button (bottom overlay) -->
+          <div class="bg-black text-white absolute bottom-0 right-0 left-0 py-3 opacity-0 group-hover:opacity-100 transition-opacity duration-300 cursor-pointer">
+            <p class="text-center font-medium flex items-center justify-center gap-2">
+              <ion-icon name="cart-outline"></ion-icon>
+              Add to Cart
+            </p>
+          </div>
+          
+          <!-- Discount badge (top left overlay) -->
+          <div class="absolute top-3 left-3">
+            <p class="bg-red-500 text-white px-2 py-1 text-sm rounded-md font-medium">-10%</p>
+          </div>
+        </div>
+        
+        <!-- Details section -->
+        <div class="w-64">
+          <p class="text-md md:text-lg">Dell - UltraSharp 39.7" IPS LED Curved 120Hz Monitor</p>
+          <p>
+            <span class="text-red-500">$1,949.99</span>
+            <span class="text-gray-400 line-through">$1755</span>
+          </p>
+          <div class="flex items-center gap-1">
+            <ion-icon class="text-yellow-500 text-lg md:text-xl" name="star"></ion-icon>
+            <ion-icon class="text-yellow-500 text-lg md:text-xl" name="star"></ion-icon>
+            <ion-icon class="text-yellow-500 text-lg md:text-xl" name="star"></ion-icon>
+            <ion-icon class="text-yellow-500 text-lg md:text-xl" name="star"></ion-icon>
+            <ion-icon class="text-yellow-500 text-lg md:text-xl" name="star"></ion-icon>
+            <p class="text-gray-400 ml-1">(88)</p>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Card 4 -->
+      <div class="flex-shrink-0">
+        <!-- Image section  -->
+        <div class="bg-gray-100 h-56 w-64 mb-4 flex justify-center items-center rounded-lg overflow-hidden relative group">
+          <!-- Product image -->
+          <img src="https://image-cdn.jambuntech.dev/qtNcFrlyjFvzC-4sgw5z8dnI9NWS51YygnNyG7Sz/1200x/filters:format(webp)/tk/1_b147e6ce35.png" alt="Xbox Controller" class="object-contain h-full w-full p-4 mix-blend-multiply">
+          
+          <!-- Heart and Eye icons positioned at top-right of the image -->
+          <div class="absolute top-3 right-3 flex flex-col gap-2">
+            <div class="h-8 w-8 rounded-full bg-white hover:bg-red-50 hover:text-red-500 duration-200 flex justify-center items-center cursor-pointer">
+              <ion-icon name="heart-outline"></ion-icon>
+            </div>
+            <div class="h-8 w-8 rounded-full bg-white hover:bg-red-50 hover:text-red-500 duration-200 flex justify-center items-center cursor-pointer">
+              <ion-icon name="eye-outline"></ion-icon>
+            </div>
+          </div>
+          
+          <!-- Add to Cart button (bottom overlay) -->
+          <div class="bg-black text-white absolute bottom-0 right-0 left-0 py-3 opacity-0 group-hover:opacity-100 transition-opacity duration-300 cursor-pointer">
+            <p class="text-center font-medium flex items-center justify-center gap-2">
+              <ion-icon name="cart-outline"></ion-icon>
+              Add to Cart
+            </p>
+          </div>
+          
+          <!-- Discount badge (top left overlay) -->
+          <div class="absolute top-3 left-3">
+            <p class="bg-red-500 text-white px-2 py-1 text-sm rounded-md font-medium">-5%</p>
+          </div>
+        </div>
+        
+        <!-- Details section -->
+        <div class="w-64">
+          <p class="text-md md:text-lg">Razer Basilisk V3 Pro 35K Wireless Gaming Mouse</p>
+          <p>
+            <span class="text-red-500">$175</span>
+            <span class="text-gray-400 line-through">$168</span>
+          </p>
+          <div class="flex items-center gap-1">
+            <ion-icon class="text-yellow-500 text-lg md:text-xl" name="star"></ion-icon>
+            <ion-icon class="text-yellow-500 text-lg md:text-xl" name="star"></ion-icon>
+            <ion-icon class="text-yellow-500 text-lg md:text-xl" name="star"></ion-icon>
+            <ion-icon class="text-yellow-500 text-lg md:text-xl" name="star"></ion-icon>
+            <ion-icon class="text-yellow-500 text-lg md:text-xl" name="star-half"></ion-icon>
+            <p class="text-gray-400 ml-1">(88)</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <!-- Button container -    -->
+  <div class="flex justify-center w-full my-5">
+    <button class="bg-red-500 text-white px-12 py-3 duration-300 transition-colors hover:bg-red-700">
+      View All the Products 
+    </button>
+  </div>
+</section>
+<!-- Best Selling Products -->
+<section>
+
+  <div class="flex item-center gap-4">
+    <div class="w-3 h-8 bg-red-500 rounded-lg"></div>
+    <p class="text-red-500">This Month</p>
+   </div>
+   <div class="flex justify-between items-center">
+    <p class="text-3xl md:text-4xl font-semibold">Best Selling Products</p>
+    <div class="flex justify-between items-center">
+      <button class="bg-red-500 text-white px-6 py-2 rounded hover:bg-red-600 transition-colors duration-300">View all</button>
+    </div>
+      
+</section>
+<section> 
+  <!-- Best Selling Products -->
+  <section class="px-8"> 
+    <h2 class="text-2xl font-bold mb-6"></h2>
+    
+    <div class="flex justify-between flex-wrap gap-6">
+      <!-- Card 1 -->
+      <div class="flex-shrink-0">
+        <!-- Image section  -->
+        <div class="bg-gray-100 h-56 w-64 mb-4 flex justify-center items-center rounded-lg overflow-hidden relative group">
+          <!-- Product image -->
+          <img src="https://cdsassets.apple.com/live/7WUAS350/images/tech-specs/111832-watch-ultra-2.png" alt="Xbox Controller" class="object-contain h-full w-full p-4 mix-blend-multiply">
+          
+          <!-- Heart and Eye icons positioned at top-right of the image -->
+          <div class="absolute top-3 right-3 flex flex-col gap-2">
+            <div class="h-8 w-8 rounded-full bg-white hover:bg-red-50 hover:text-red-500 duration-200 flex justify-center items-center cursor-pointer">
+              <ion-icon name="heart-outline"></ion-icon>
+            </div>
+            <div class="h-8 w-8 rounded-full bg-white hover:bg-red-50 hover:text-red-500 duration-200 flex justify-center items-center cursor-pointer">
+              <ion-icon name="eye-outline"></ion-icon>
+            </div>
+          </div>
+          
+          <!-- Add to Cart button (bottom overlay) -->
+          <div class="bg-black text-white absolute bottom-0 right-0 left-0 py-3 opacity-0 group-hover:opacity-100 transition-opacity duration-300 cursor-pointer">
+            <p class="text-center font-medium flex items-center justify-center gap-2">
+              <ion-icon name="cart-outline"></ion-icon>
+              Add to Cart
+            </p>
+          </div>
+          
+          <!-- Discount badge (top left overlay) -->
+          <div class="absolute top-3 left-3">
+            <p class="bg-red-500 text-white px-2 py-1 text-sm rounded-md font-medium">-5%</p>
+          </div>
+        </div>
+        
+        <!-- Details section -->
+        <div class="w-64">
+          <p class="text-md md:text-lg">Electronics – Apple Watch Ultra 2 (Advanced smartwatch with health tracking)</p>
+          <p>
+            <span class="text-red-500">$760</span>
+            <span class="text-gray-400 line-through">$799</span>
+          </p>
+          <div class="flex items-center gap-1">
+            <ion-icon class="text-yellow-500 text-lg md:text-xl" name="star"></ion-icon>
+            <ion-icon class="text-yellow-500 text-lg md:text-xl" name="star"></ion-icon>
+            <ion-icon class="text-yellow-500 text-lg md:text-xl" name="star"></ion-icon>
+            <ion-icon class="text-yellow-500 text-lg md:text-xl" name="star"></ion-icon>
+            <ion-icon class="text-yellow-500 text-lg md:text-xl" name="star"></ion-icon>
+            <p class="text-gray-400 ml-1">(68)</p>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Card 2 -->
+      <div class="flex-shrink-0">
+        <!-- Image section  -->
+        <div class="bg-gray-100 h-56 w-64 mb-4 flex justify-center items-center rounded-lg overflow-hidden relative group">
+          <!-- Product image -->
+          <img src="https://images-cdn.ubuy.ae/654de75410d4601a5d02807e-new-dior-sauvage-eau-de-parfum-spray.jpg" alt="Xbox Controller" class="object-contain h-full w-full p-4 mix-blend-multiply">
+          
+          <!-- Heart and Eye icons positioned at top-right of the image -->
+          <div class="absolute top-3 right-3 flex flex-col gap-2">
+            <div class="h-8 w-8 rounded-full bg-white hover:bg-red-50 hover:text-red-500 duration-200 flex justify-center items-center cursor-pointer">
+              <ion-icon name="heart-outline"></ion-icon>
+            </div>
+            <div class="h-8 w-8 rounded-full bg-white hover:bg-red-50 hover:text-red-500 duration-200 flex justify-center items-center cursor-pointer">
+              <ion-icon name="eye-outline"></ion-icon>
+            </div>
+          </div>
+          
+          <!-- Add to Cart button (bottom overlay) -->
+          <div class="bg-black text-white absolute bottom-0 right-0 left-0 py-3 opacity-0 group-hover:opacity-100 transition-opacity duration-300 cursor-pointer">
+            <p class="text-center font-medium flex items-center justify-center gap-2">
+              <ion-icon name="cart-outline"></ion-icon>
+              Add to Cart
+            </p>
+          </div>
+          
+          <!-- Discount badge (top left overlay) -->
+          <div class="absolute top-3 left-3">
+            <p class="bg-red-500 text-white px-2 py-1 text-sm rounded-md font-medium">-10%</p>
+          </div>
+        </div>
+        
+        <!-- Details section -->
+        <div class="w-64">
+          <p class="text-md md:text-lg">Dior Sauvage Eau De Parfum Spray for Men 3.4 Ounces - Raw, Noble Scent</p>
+          <p>
+            <span class="text-red-500">$118</span>
+            <span class="text-gray-400 line-through">$131</span>
+          </p>
+          <div class="flex items-center gap-1">
+            <ion-icon class="text-yellow-500 text-lg md:text-xl" name="star"></ion-icon>
+            <ion-icon class="text-yellow-500 text-lg md:text-xl" name="star"></ion-icon>
+            <ion-icon class="text-yellow-500 text-lg md:text-xl" name="star"></ion-icon>
+            <ion-icon class="text-yellow-500 text-lg md:text-xl" name="star-half"></ion-icon>
+           
+            <p class="text-gray-400 ml-1">(68)</p>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Card 3 -->
+      <div class="flex-shrink-0">
+        <!-- Image section  -->
+        <div class="bg-gray-100 h-56 w-64 mb-4 flex justify-center items-center rounded-lg overflow-hidden relative group">
+          <!-- Product image -->
+          <img src="https://images.asics.com/is/image/asics/1051A073_404_SR_RT_GLB?$sfcc-product$" alt="Xbox Controller" class="object-contain h-full w-full p-4 mix-blend-multiply">
+          
+          <!-- Heart and Eye icons positioned at top-right of the image -->
+          <div class="absolute top-3 right-3 flex flex-col gap-2">
+            <div class="h-8 w-8 rounded-full bg-white hover:bg-red-50 hover:text-red-500 duration-200 flex justify-center items-center cursor-pointer">
+              <ion-icon name="heart-outline"></ion-icon>
+            </div>
+            <div class="h-8 w-8 rounded-full bg-white hover:bg-red-50 hover:text-red-500 duration-200 flex justify-center items-center cursor-pointer">
+              <ion-icon name="eye-outline"></ion-icon>
+            </div>
+          </div>
+          
+          <!-- Add to Cart button (bottom overlay) -->
+          <div class="bg-black text-white absolute bottom-0 right-0 left-0 py-3 opacity-0 group-hover:opacity-100 transition-opacity duration-300 cursor-pointer">
+            <p class="text-center font-medium flex items-center justify-center gap-2">
+              <ion-icon name="cart-outline"></ion-icon>
+              Add to Cart
+            </p>
+          </div>
+          
+          <!-- Discount badge (top left overlay) -->
+          <div class="absolute top-3 left-3">
+            <p class="bg-red-500 text-white px-2 py-1 text-sm rounded-md font-medium">-30%</p>
+          </div>
+        </div>
+        
+        <!-- Details section -->
+        <div class="w-64">
+          <p class="text-md md:text-lg">NETBURNER BALLISTIC FF 3 A bouncy trainer that helps provide a responsive energy.</p>
+          <p>
+            <span class="text-red-500">$84</span>
+            <span class="text-gray-400 line-through">$120</span>
+          </p>
+          <div class="flex items-center gap-1">
+            <ion-icon class="text-yellow-500 text-lg md:text-xl" name="star"></ion-icon>
+            <ion-icon class="text-yellow-500 text-lg md:text-xl" name="star"></ion-icon>
+            <ion-icon class="text-yellow-500 text-lg md:text-xl" name="star"></ion-icon>
+            <ion-icon class="text-yellow-500 text-lg md:text-xl" name="star"></ion-icon>
+            <ion-icon class="text-yellow-500 text-lg md:text-xl" name="star-half"></ion-icon>
+            <p class="text-gray-400 ml-1">(68)</p>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Card 4 -->
+      <div class="flex-shrink-0">
+        <!-- Image section  -->
+        <div class="bg-gray-100 h-56 w-64 mb-4 flex justify-center items-center rounded-lg overflow-hidden relative group">
+          <!-- Product image -->
+          <img src="https://platform.theverge.com/wp-content/uploads/sites/2/chorus/uploads/chorus_asset/file/22706693/secretlab_titanevo.jpg?quality=90&strip=all&crop=0,0,100,100" alt="Xbox Controller" class="object-contain h-full w-full p-4 mix-blend-multiply">
+          
+          <!-- Heart and Eye icons positioned at top-right of the image -->
+          <div class="absolute top-3 right-3 flex flex-col gap-2">
+            <div class="h-8 w-8 rounded-full bg-white hover:bg-red-50 hover:text-red-500 duration-200 flex justify-center items-center cursor-pointer">
+              <ion-icon name="heart-outline"></ion-icon>
+            </div>
+            <div class="h-8 w-8 rounded-full bg-white hover:bg-red-50 hover:text-red-500 duration-200 flex justify-center items-center cursor-pointer">
+              <ion-icon name="eye-outline"></ion-icon>
+            </div>
+          </div>
+          
+          <!-- Add to Cart button (bottom overlay) -->
+          <div class="bg-black text-white absolute bottom-0 right-0 left-0 py-3 opacity-0 group-hover:opacity-100 transition-opacity duration-300 cursor-pointer">
+            <p class="text-center font-medium flex items-center justify-center gap-2">
+              <ion-icon name="cart-outline"></ion-icon>
+              Add to Cart
+            </p>
+          </div>
+          
+          <!-- Discount badge (top left overlay) -->
+          <div class="absolute top-3 left-3">
+            <p class="bg-red-500 text-white px-2 py-1 text-sm rounded-md font-medium">-15%</p>
+          </div>
+        </div>
+        
+        <!-- Details section -->
+        <div class="w-64">
+          <p class="text-md md:text-lg">Secretlab titan evo royal gaming chair Next-generation materials.  </p>
+          <p>
+            <span class="text-red-500">$549</span>
+            <span class="text-gray-400 line-through">$639</span>
+          </p>
+          <div class="flex items-center gap-1">
+            <ion-icon class="text-yellow-500 text-lg md:text-xl" name="star"></ion-icon>
+            <ion-icon class="text-yellow-500 text-lg md:text-xl" name="star"></ion-icon>
+            <ion-icon class="text-yellow-500 text-lg md:text-xl" name="star"></ion-icon>
+            <ion-icon class="text-yellow-500 text-lg md:text-xl" name="star"></ion-icon>
+            <ion-icon class="text-yellow-500 text-lg md:text-xl" name="star"></ion-icon>
+            <p class="text-gray-400 ml-1">(68)</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+<!-- Footer section with full width -->
+<footer class="bg-black text-white pb-8 mt-8  ">
+  <div class="w-full px-4 lg:px-6"> 
+    <!-- Footer content with download app on right -->
+    <div class="grid grid-cols-1 lg:grid-cols-4 gap-4 pt-6">
+      
+      <!-- Subscribe Section (Now first) -->
+      <div class="space-y-2">
+        <h2 class="text-lg font-bold">Exclusive</h2>
+        <h3 class="text-base">Subscribe</h3>
+        <p class="text-gray-400 text-sm">Get 10% off your first order</p>
+        <div class="flex items-center gap-1 border border-gray-600 rounded-md bg-black text-white">
+          <input type="email"
+          placeholder="Enter your mail"
+          class="w-full p-1.5 text-sm placeholder-gray-400 bg-black">
+          <button class="text-white px-3 py-1.5 rounded-lg">
+            <ion-icon name="send-outline"></ion-icon>
+          </button>
+        </div>
+      </div>
+      
+      <!-- Support Section -->
+      <div class="space-y-2">
+        <h3 class="text-base font-medium">Support</h3>
+        <p class="text-gray-400 text-sm">
+          Street 286, Toul Svay Prey 2
+        </p>
+        <p class="text-gray-400 text-sm">ExclusiveCambodia@gmail.com</p>
+        <p class="text-gray-400 text-sm">(+855) 023 888 999</p>
+      </div>
+      
+      <!-- Account Section -->
+      <div class="space-y-2">
+        <h3 class="text-base font-medium">Account</h3>
+        <ul class="text-gray-400 text-sm space-y-1">
+          <li>My Account</li>
+          <li>Order History</li>
+          <li>Wishlist</li>
+          <li>Newsletter</li>
+        </ul>
+      </div>
+      
+      <!-- Download App Section - Now as last column (right side) -->
+      <div class="lg:flex lg:justify-end"> <!-- Added justify-end to push content to right -->
+        <div>
+          <h3 class="text-base font-medium pb-2">Download App</h3>
+          <div class="bg-red-500 text-white p-1.5 rounded-md inline-block mb-3">
+            <p class="font-bold text-sm">Save $3 with App</p>
+            <p class="text-xs">App users only!</p>
+          </div>
+          
+          <div class="flex items-start gap-2">
+            <!-- QR Code -->
+            <div class="w-16 h-16 bg-white p-1">
+              <img src="./image.png" alt="QR Code" class="w-full h-full">
+            </div>
+            
+            <!-- App Store Links -->
+            <div class="flex flex-col gap-2">
+              <!-- Google Play Button -->
+              <a href="https://play.google.com/store/apps" target="_blank" rel="noopener noreferrer" class="block bg-black border border-gray-600 rounded-md px-2 py-1">
+                <div class="flex items-center gap-1.5">
+                  <div class="w-4 h-4 relative">
+                    <img src="https://freelogopng.com/images/all_img/1664285914google-play-logo-png.png"
+                         alt="Google Play"
+                         class="absolute inset-0 w-full h-full object-contain">
+                  </div>
+                  <div>
+                    <p class="text-xs text-gray-400">GET IT ON</p>
+                    <p class="text-xs font-medium">Google Play</p>
+                  </div>
+                </div>
+              </a>
+              
+              <!-- App Store Button -->
+              <a href="https://apps.apple.com/" target="_blank" rel="noopener noreferrer" class="block bg-black border border-gray-600 rounded-md px-2 py-1">
+                <div class="flex items-center gap-1.5">
+                  <div class="w-4 h-4 relative">
+                    <img src="https://wallpapers.com/images/hd/apple-logo-black-background-jw0e3716wxz5qb3s.jpg"
+                         alt="App Store"
+                         class="absolute inset-0 w-full h-full object-contain">
+                  </div>
+                  <div>
+                    <p class="text-xs text-gray-400">Download on the</p>
+                    <p class="text-xs font-medium">App Store</p>
+                  </div>
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Footer bottom with social media - Full width -->
+    <div class="border-t border-gray-800 mt-6 pt-4">
+      <div class="flex flex-col md:flex-row justify-between items-center">
+        <p class="text-gray-400 text-sm">© 2025 Exclusive. All rights reserved.</p>
+        
+        <!-- Social Media Icons -->
+        <div class="flex gap-4 mt-2 md:mt-0">
+          <a href="https://www.facebook.com/share/16R8ck6foG/?mibextid=wwXIfr" class="text-gray-400 hover:text-white">
+            <ion-icon name="logo-facebook" class="text-lg"></ion-icon>
+          </a>
+          <a href="" class="text-gray-400 hover:text-white">
+            <ion-icon name="logo-instagram" class="text-lg"></ion-icon>
+          </a>
+          <a href="#" class="text-gray-400 hover:text-white">
+            <ion-icon name="paper-plane-outline" class="text-lg"></ion-icon>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+</html>
